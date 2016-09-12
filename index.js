@@ -1,6 +1,6 @@
 var http = require('http');
 var express = require('express');
-var DynamicKey4 = require('./AgoraDynamicKey/nodejs/src/DynamicKey4');
+var DynamicKey4 = require('AgoraDynamicKey/nodejs/src/DynamicKey4');
 
 var PORT = process.env.PORT || 8080;
 

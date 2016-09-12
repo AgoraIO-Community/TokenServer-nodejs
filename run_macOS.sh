@@ -6,17 +6,6 @@ then
     exit
 fi
 
-if [ ! -d 'AgoraDynamicKey' ]; then
-    echo "Downloading AgoraDynamicKey source code"
-    git clone 'https://github.com/AgoraLab/AgoraDynamicKey.git'
-else
-    echo "AgoraDynamicKey has been downloaded. Try to update it"
-    cd AgoraDynamicKey
-    git pull --rebase
-    cd ..
-    pwd
-fi
-
 if [ -z `which npm` ]; then
     echo '***************************************'
     echo "node is not found"
