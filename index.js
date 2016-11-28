@@ -1,6 +1,7 @@
 var http = require('http');
 var express = require('express');
 var DynamicKey4 = require('AgoraDynamicKey/nodejs/src/DynamicKey4');
+var DynamicKey5 = require('AgoraDynamicKey/nodejs/src/DynamicKey5');
 
 var PORT = process.env.PORT || 8080;
 
@@ -70,8 +71,31 @@ var generateRecordingKey = function (req, resp) {
     return resp.json({ 'recording_key': recording_key }).send();
 };
 
+var generateInChannelPermission = function (req, resp) {
+    resp.header('Access-Control-Allow-Origin', "*")
+
+    var unixTs = Math.round(new Date().getTime() / 1000);
+    var randomInt = Math.round(Math.random() * 100000000);
+
+    var channel = req.query.channel;
+    if (!channel) {
+        return resp.status(500).json({ 'error': 'channel name is required' }).send();
+    }
+
+    var uid = req.query.uid;
+    if (!uid) {
+        return resp.status(500).json({ 'error': 'uid is required' }).send();
+    }
+
+    var permission = req.query.permission;
+
+    var recording_key = DynamicKey5.generateInChannelPermissionKey(APP_ID, APP_CERTIFICATE, channel, unixTs, randomInt, uid, 0, permission);
+    return resp.json({ 'in_channel_permission_key': recording_key }).send();
+}
+
 app.get('/channel_key', nocache, generateChannelKey);
 app.get('/recording_key', nocache, generateRecordingKey);
+app.get('/in_channel_permission_key', nocache, generateInChannelPermission);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Service URL http://127.0.0.1:' + app.get('port') + "/");
