@@ -1,5 +1,7 @@
 # Sample NodeJS Token Server@express
 
+*阅读中文版本: [中文](README.zh.md)*
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AgoraIO-Community/TokenServer-nodejs)
 
 1. Click the deploy link above to start
