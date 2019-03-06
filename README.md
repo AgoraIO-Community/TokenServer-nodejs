@@ -1,14 +1,11 @@
-## Dynamic Key Server
+## Sample NodeJS Token Server@express
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AgoraIO-Community/TokenServer-nodejs)
 
-Simply click the link above, and put in your AppID and App Certificate.
-
-Or, you can run this Dynamic Key Server in a terminal with the following command,
-
-```
-./run_macOS.sh appID appCertificate
-```
+1. Click the deploy link above to start
+2. Fill in your app name, APP_ID and APP_CERTIFICATE and press `Deploy App`
+3. Make a cup of coffee and wait for heroku to finish :)
+4. Once done you will get an url for your instance, try accessing `https://<heroku url>/access_token?channel=test&uid=1234` to check if it works
 
 # Dashboard
 
