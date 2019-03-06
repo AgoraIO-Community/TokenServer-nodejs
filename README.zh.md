@@ -1,5 +1,7 @@
 ## NodeJS鉴权服务器 @ express
 
+*Other languages: [English](README.md)*
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AgoraIO-Community/TokenServer-nodejs)
 
 1.  点击上面的Deploy链接开始
