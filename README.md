@@ -2,7 +2,7 @@
 
 *阅读中文版本: [中文](README.zh.md)*
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AgoraIO-Community/TokenServer-nodejs)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Nassyr8/chatLivestream)
 
 1. Click the deploy link above to start
 2. Fill in your app name, APP_ID and APP_CERTIFICATE and press `Deploy App`
