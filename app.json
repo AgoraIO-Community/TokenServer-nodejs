@@ -14,7 +14,7 @@
     "ARS"
   ],
   "website": "http://www.agora.io",
-  "repository": "https://github.com/AgoraLab/DynamicKeyServer-nodejs",
+  "repository": "https://github.com/Nassyr8/chatLivestream",
   "env": {
     "APP_ID": {
       "description": "Agora.io App ID: Login to the Agora.io Developer Dashboard (http://dashboard.agora.io), and navigate to the \"Projects\" tab to get this value",
